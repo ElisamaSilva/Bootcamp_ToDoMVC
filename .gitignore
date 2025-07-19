@@ -1,0 +1,13 @@
+# Ignorar arquivos gerados automaticamente e caches
+downloads/
+screenshots/
+videos/
+fixtures/example.json
+support/commands.js
+support/e2e.js
+support/index.js
+support/old/
+*.log
+
+# Ignorar dependências
+node_modules/
