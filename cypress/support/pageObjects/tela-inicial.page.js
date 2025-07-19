@@ -9,6 +9,23 @@ class telaInicial {
         cy.get(elem.inputToDo).type(dado).type('{enter}');
     }
 
+    validarInput(texto) {
+        cy.get(elem.inputToDo)  
+        .should('have.attr', 'placeholder')
+        .and('include',texto)
+    }
+
+    validarContador(numero) {
+        cy.get(filtrarItem.contador)
+            .find ('strong')
+            .contains(numero)
+    }
+
+    validarSizeToDo(numero) {
+        cy.get(concluirItem.validarListaItens)
+            .should('have.length', numero);
+    }
+
     concluirItem() {
         cy.get(concluirItem.buttonConcluir).first().click();
 
